@@ -1,1 +1,27 @@
-/* 푸쉬테스트 */
+.login { width: 410px; position: absolute; left: 50%; top: 50%; transform:translate(-50%, -50%); text-align: center;}
+
+.login h2{ padding:0 0 20px; font-size: 32px; color: #111; border-bottom: 2px solid #000; text-align: center; line-height: 1;}
+.login > ul {padding: 40px 0 33px;}
+.login > ul li {padding: 0 0 12px; text-align: left;}
+.login > ul li input {width: 100%; height: 46px; box-sizing:border-box; text-indent: 16px;}
+/* 오른쪽 뚥고 나오는 이유 : border가 있기떄문에 100%+@ 이므로 2픽셀이 초과된 것
+제거할 수는 없기 떄문에 border-box를 넣어주면 됨   => ???*/
+
+.login > ul li input::-webkit-input-placeholder { font-size: 16px; color: #9fa19f; }
+.login > ul li input[type="checkbox"] { position:absolute; left: -3000%;}
+.login > ul li input[type="checkbox"] + label{height: 36px; line-height: 36px;}
+.login > ul li input[type="checkbox"] + label::before {content:""; display: inline-block; margin:0 10px 0 0; width: 18px; height: 18px;
+    border: 1px solid #666; background: #fff; vertical-align: -5px;}
+.login li input[type="checkbox"]:checked + label::before {background: url(ico_check_on.png) no-repeat center #333; border-color: #333;}
+.login button{width: 100%; height: 56px; background: #ed1c24; font-size: 18px; color: #fff;}
+/* li 여백 끝 */
+.login div { padding: 0 0 45;}
+.login div ul {display: flex; justify-content: center;}
+.login div ul li{position: relative; padding: 0 18px;}
+.login div ul li ~ li::after{content:""; position:absolute; left:0; top: 4px; height: 14px; width:  1px; background: #111; transform:rotate(25deg) ;}
+/* ~ 사용할 경우 첫번쨰 li을 제외한 나머지까지 선택됨 */
+/* 사용자가 헷갈리지 않도록 a에 패딩하지 않도록 주의 */
+.login div ul li a{ font-size: 14px ; color: #111;}
+
+.login > a {position: relative; font-size: 14px; color: #666; }
+.login > a::after { content:""; position:absolute; left: 0; bottom:0; width: 100%; height: 1px; background: #666;}
