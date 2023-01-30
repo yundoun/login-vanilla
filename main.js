@@ -25,8 +25,12 @@ newDiv.appendChild(newUl2) // ul 태그 div 태그에 추가
 
 newLi2.innerHTML = "<a href=''>회원가입 </a><a href=''>아이디 찾기 </a><a href=''>비밀번호 찾기"
 
+const a = document.createElement('a')
 
+a.innerText = '비회원 주문조회'
+a.href = '/guest'
 
 
 $loginSection.appendChild(newUl) //섹션 태그에 ul 태그 추가
 $loginSection.appendChild(newDiv) // 섹션 태그에 div 태그 추가
+$loginSection.appendChild(a)
